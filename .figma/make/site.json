@@ -1,0 +1,10 @@
+{
+  "description": "This web application offers a user-friendly interface for generating and managing color palettes, ideal for designers seeking cohesive color schemes.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

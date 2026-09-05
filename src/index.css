@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Noto+Sans:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-mk-blue: #8EC5FF;
+  --color-mk-mint: #CFF7EA;
+  --color-mk-gray: #DDE3EA;
+  --color-mk-light: #F4FAFF;
+  --color-mk-navy: #0d2a5a;
+  --color-mk-deep: #1a3a6b;
+  --color-mk-text: #1a2744;
+  --color-mk-muted: #4a5a7a;
+  --color-mk-danger: #c0001a;
+  --color-mk-danger-bg: #fff0f0;
+  --color-mk-success: #047857;
+  --color-mk-success-bg: #ecfdf5;
+  --color-mk-warning: #b45309;
+  --color-mk-warning-bg: #fffbeb;
+  --color-mk-card: #ffffff;
+  --color-mk-selected: #2563eb;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Nunito', 'Noto Sans', sans-serif;
+}
+
+.font-devanagari {
+  font-family: 'Noto Sans Devanagari', 'Nunito', sans-serif;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Hide scrollbars by default */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #DDE3EA; border-radius: 4px; }
+
+.speaking-pulse {
+  animation: pulse-ring 1.5s ease-out infinite;
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(142, 197, 255, 0.7); }
+  70% { box-shadow: 0 0 0 16px rgba(142, 197, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(142, 197, 255, 0); }
+}
+
+.step-check {
+  animation: step-in 0.4s ease forwards;
+}
+
+@keyframes step-in {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.screen-enter {
+  animation: fade-up 0.3s ease;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.btn-tap:active {
+  transform: scale(0.97);
+  transition: transform 0.1s;
+}
+
+.selected-card {
+  border-color: #2563eb !important;
+  background-color: #EFF6FF !important;
+  color: #1d4ed8 !important;
+}
+
+.selected-card .icon-text {
+  color: #1d4ed8 !important;
+}
